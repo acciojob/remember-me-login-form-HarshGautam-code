@@ -7,7 +7,7 @@ const passwordInput = document.getElementById("password");
 const checkbox = document.getElementById("checkbox");
 const existingBtn = document.getElementById("existing");
 
-// 👉 Check if user already exists in localStorage
+//  Check if user already exists in localStorage
 function checkExistingUser() {
   const savedUser = localStorage.getItem("username");
 
@@ -18,7 +18,7 @@ function checkExistingUser() {
   }
 }
 
-// 👉 Handle form submit
+//  Handle form submit
 form.addEventListener("submit", function (e) {
   e.preventDefault();
 
@@ -40,7 +40,7 @@ form.addEventListener("submit", function (e) {
   checkExistingUser();
 });
 
-// 👉 Login as existing user
+//  Login as existing user
 existingBtn.addEventListener("click", function () {
   const savedUser = localStorage.getItem("username");
 
@@ -49,5 +49,5 @@ existingBtn.addEventListener("click", function () {
   }
 });
 
-// 👉 Run on page load
+//  Run on page load
 checkExistingUser();
